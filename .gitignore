@@ -1,5 +1,14 @@
+# Python
 venv/
 __pycache__/
 *.pyc
 .env
 .DS_Store
+
+# Python model files (not needed for web version)
+hand_landmarker.task
+selfie_segmenter.tflite
+
+# Optional: Keep Python files if you want both versions
+# main.py
+# requirements.txt

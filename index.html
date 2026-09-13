@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrolens - Hand Tracking Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 RETROLENS</h1>
+            <p class="subtitle">Hand Tracking Filter Portal</p>
+        </div>
+        
+        <div class="video-container">
+            <video id="video" playsinline autoplay muted></video>
+            <canvas id="canvas"></canvas>
+            <canvas id="output-canvas"></canvas>
+        </div>
+        
+        <div class="controls">
+            <div class="filter-info">
+                <span class="filter-label">Filter Aktif:</span>
+                <span id="current-filter" class="filter-value">MONO</span>
+            </div>
+            <div class="instructions">
+                <p>👆 Gunakan jempol & telunjuk dari kedua tangan untuk membuat portal</p>
+                <p>🔄 Sentuh jempol & kelingking untuk ganti filter</p>
+            </div>
+            <button id="start-btn" class="btn-primary">Mulai Kamera</button>
+        </div>
+        
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Memuat model MediaPipe...</p>
+        </div>
+        
+        <div id="error" class="error hidden"></div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
